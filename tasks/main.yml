@@ -1,0 +1,11 @@
+---
+
+- name: Install sshd
+  yum: name=openssh-server state=present
+
+- name: Setup Openssh server
+  template: src=sshd_config.j2 dest=/etc/ssh/sshd_config mode=0600 owner=root group=root
+  notify: restart sshd
+
+- name: Enable sshd service
+  service: name=sshd state=started enabled=yes

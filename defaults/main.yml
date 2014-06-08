@@ -1,0 +1,5 @@
+---
+
+ssh_permit_root_login: "no"
+ssh_use_privilege_separation: "yes"
+ssh_gssapi_authentication: "no"
