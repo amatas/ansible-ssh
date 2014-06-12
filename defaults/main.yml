@@ -1,5 +1,6 @@
 ---
 
-ssh_permit_root_login: "no"
+ssh_permit_root_login: "without-password" # no, yes, forced-command-only
 ssh_use_privilege_separation: "yes"
 ssh_gssapi_authentication: "no"
+
